@@ -1,56 +1,56 @@
 -- Insert Department Data
-INSERT INTO department (id, name)
+INSERT INTO department (name)
 VALUES
-  (1, 'Engineering'),
-  (2, 'Sales'),
-  (3, 'Finance'),
-  (4, 'Legal'),
-  (5, 'Marketing'),
-  (6, 'Human Resources'),
-  (7, 'IT'),
-  (8, 'Customer Service'),
-  (9, 'Research and Development'),
-  (10, 'Operations');
+  ('Engineering'),
+  ('Sales'),
+  ('Finance'),
+  ('Legal'),
+  ('Marketing'),
+  ('Human Resources'),
+  ('IT'),
+  ('Customer Service'),
+  ('Research and Development'),
+  ('Operations');
 
 -- Inert Role Data
 INSERT INTO role
-  (id, title, salary, department_id)
+  (title, salary, department_id)
 VALUES
-  (1, 'Software Engineer', 85000, 1),
-  (2, 'Salesperson', 75000, 2),
-  (3, 'Accountant', 125000, 3),
-  (4, 'Lawyer', 200000, 4),
-  (5, 'Marketing Specialist', 90000, 5),
-  (6, 'HR Manager', 110000, 6),
-  (7, 'IT Specialist', 95000, 7),
-  (8, 'Customer Support Representative', 60000, 8),
-  (9, 'Research Scientist', 120000, 9),
-  (10, 'Operations Manager', 100000, 10);
+  ('Software Engineer', 85000, 1),
+  ('Salesperson', 75000, 2),
+  ('Accountant', 125000, 3),
+  ('Lawyer', 200000, 4),
+  ('Marketing Specialist', 90000, 5),
+  ('HR Manager', 110000, 6),
+  ('IT Specialist', 95000, 7),
+  ('Customer Support Representative', 60000, 8),
+  ('Research Scientist', 120000, 9),
+  ('Operations Manager', 100000, 10);
 
 
 -- Insert Employee Data
 INSERT INTO employee
-  (id, first_name, last_name, role_id, manager_id)
+  (first_name, last_name, role_id, manager_id)
 VALUES
-  (1, 'Liam', 'Smith', 1, NULL),
-  (2, 'Olivia', 'Jones', 2, NULL),
-  (3, 'Ava', 'Williams', 3, NULL),
-  (4, 'Noah', 'Brown', 4, NULL),
-  (5, 'Charlotte', 'Davis', 1, NULL),
-  (6, 'Ethan', 'Miller', 2, NULL),
-  (7, 'Isabella', 'Wilson', 3, NULL),
-  (8, 'Mia', 'Moore', 4, NULL),
-  (9, 'Oliver', 'Johnson', 5, NULL),
-  (10, 'Amelia', 'Taylor', 6, NULL),
-  (11, 'Lucas', 'Anderson', 7, NULL),
-  (12, 'Sophia', 'White', 8, NULL),
-  (13, 'Jack', 'Martin', 9, NULL),
-  (14, 'Chloe', 'Thompson', 10, NULL),
-  (15, 'William', 'Harris', 1, NULL),
-  (16, 'Ruby', 'Clark', 2, NULL),
-  (17, 'Elijah', 'Lee', 3, NULL),
-  (18, 'Grace', 'Walker', 4, NULL),
-  (19, 'James', 'Carter', 5, NULL);
+  ('Liam', 'Smith', 1, NULL),
+  ('Olivia', 'Jones', 2, NULL),
+  ('Ava', 'Williams', 3, NULL),
+  ('Noah', 'Brown', 4, NULL),
+  ('Charlotte', 'Davis', 1, NULL),
+  ('Ethan', 'Miller', 2, NULL),
+  ('Isabella', 'Wilson', 3, NULL),
+  ('Mia', 'Moore', 4, NULL),
+  ('Oliver', 'Johnson', 5, NULL),
+  ('Amelia', 'Taylor', 6, NULL),
+  ('Lucas', 'Anderson', 7, NULL),
+  ('Sophia', 'White', 8, NULL),
+  ('Jack', 'Martin', 9, NULL),
+  ('Chloe', 'Thompson', 10, NULL),
+  ('William', 'Harris', 1, NULL),
+  ('Ruby', 'Clark', 2, NULL),
+  ('Elijah', 'Lee', 3, NULL),
+  ('Grace', 'Walker', 4, NULL),
+  ('James', 'Carter', 5, NULL);
 
 -- Assign Manager to Employee
 UPDATE employee SET manager_id = 1 WHERE id IN (5, 15);  
